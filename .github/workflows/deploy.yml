@@ -30,6 +30,6 @@ jobs:
         PORT: 22
         KEY: ${{ secrets.rootKey }}
       with:
-        source: "src/*"
-        target: "arkanyx-webapp/src/"
+        source: "build/*"
+        target: "arkanyx-webapp-prod/"
         strip_components: 1
