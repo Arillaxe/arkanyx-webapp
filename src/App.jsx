@@ -29,7 +29,7 @@ const App = () => {
           <img src={logo} className="App-logo" alt="logo" />
         </div>
         <p>
-          Soon...
+          Soon, very soon...
         </p>
       </header>
     </div>
