@@ -1,0 +1,71 @@
+{
+  "name": "arkanyx-webapp",
+  "version": "1.0.0",
+  "description": "Frontend app of arkanyx.com",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.config.js --mode development --hot",
+    "build": "webpack --config webpack.config.js --mode development",
+    "watch": "webpack --config webpack.config.js --watch --mode development",
+    "build-prod": "webpack --config webpack.config.js",
+    "eslint": "eslint . --ext .js --ext .jsx",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Azumiar/arkanyx-webapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-conventional": "^8.2.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.17.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^2.7.0",
+    "ip": "^1.1.5",
+    "lint-staged": "^9.5.0",
+    "style-loader": "^0.23.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
+  },
+  "dependencies": {
+    "config": "^3.1.0",
+    "debug": "^4.1.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && ./scripts/branch-check.sh $GIT_PARAMS",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "./commitlint.config.js"
+    ]
+  },
+  "lint-staged": {
+    "*.(js|jsx)": [
+      "npm run eslint",
+      "git add"
+    ]
+  }
+}

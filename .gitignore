@@ -1,0 +1,12 @@
+.idea
+.DS_Store
+node_modules
+npm-debug.log
+tmp/*
+dist/*
+build/*
+!config/config.example.js
+config/*
+docker/_snapshot
+data/
+package-lock.json
