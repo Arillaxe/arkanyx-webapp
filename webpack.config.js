@@ -5,8 +5,6 @@ const config = require('config');
 const { host, port, publicHost } = config.get('webpack');
 const outputFolder = 'build';
 
-console.log(process.env);
-
 
 module.exports = {
   entry: './public/index.js',
@@ -37,7 +35,10 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './public/index.html' }),
+    new HtmlWebpackPlugin({
+      template: './public/index.html',
+      favicon: './public/favicon.ico',
+    }),
   ],
   devServer: {
     contentBase: path.join(__dirname, outputFolder),
