@@ -5,6 +5,8 @@ const config = require('config');
 const { host, port, publicHost } = config.get('webpack');
 const outputFolder = 'build';
 
+console.log(process.env);
+
 
 module.exports = {
   entry: './public/index.js',

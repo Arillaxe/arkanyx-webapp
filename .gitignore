@@ -6,6 +6,7 @@ tmp/*
 dist/*
 build/*
 !config/config.example.js
+!config/default.js
 config/*
 docker/_snapshot
 data/
