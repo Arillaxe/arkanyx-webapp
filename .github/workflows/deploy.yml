@@ -38,6 +38,8 @@ jobs:
       if: success()
       with:
           severity: info
+          username: Deployment worker
+          avatarUrl: https://sun2-3.userapi.com/TRajTVWLK_FkH4j7pRJ0N0haoDsQIwLPyO7YOg/tEfrtl-gOoY.jpg
           details: Все заебись!
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Deploy failure
@@ -45,6 +47,8 @@ jobs:
       if: failure()
       with:
           severity: error
+          username: Deployment worker
+          avatarUrl: https://sun2-3.userapi.com/TRajTVWLK_FkH4j7pRJ0N0haoDsQIwLPyO7YOg/tEfrtl-gOoY.jpg
           details: У бля чет где то ебануло!
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
     - name: Deploy cancelled
@@ -52,5 +56,7 @@ jobs:
       if: cancelled()
       with:
           severity: warn
+          username: Deployment worker
+          avatarUrl: https://sun2-3.userapi.com/TRajTVWLK_FkH4j7pRJ0N0haoDsQIwLPyO7YOg/tEfrtl-gOoY.jpg
           details: Произошла непонятная хуйня!
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
