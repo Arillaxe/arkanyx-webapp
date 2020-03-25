@@ -5,9 +5,9 @@ npm-debug.log
 tmp/*
 dist/*
 build/*
+config/*
 !config/config.example.js
 !config/default.js
-config/*
 docker/_snapshot
 data/
 package-lock.json
