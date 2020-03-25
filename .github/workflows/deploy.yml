@@ -33,3 +33,24 @@ jobs:
         source: "build/*"
         target: "arkanyx-webapp-prod/"
         strip_components: 1
+    - name: Test Success
+      uses: rjstone/discord-webhook-notify@v1
+      if: success()
+      with:
+          severity: info
+          details: Все заебись!
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+    - name: Test Failure
+      uses: rjstone/discord-webhook-notify@v1
+      if: failure()
+      with:
+          severity: error
+          details: Бля чет где то ебануло!
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+    - name: Test Cancelled
+      uses: rjstone/discord-webhook-notify@v1
+      if: cancelled()
+      with:
+          severity: warn
+          details: Произошла непонятная хуйня!
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
