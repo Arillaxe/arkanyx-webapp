@@ -17,7 +17,9 @@ module.exports = {
     alias: {
       '@src': path.resolve(__dirname, 'src'),
     },
+    extensions: ['.js', '.jsx'],
   },
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {
