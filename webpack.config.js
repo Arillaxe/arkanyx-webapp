@@ -13,6 +13,11 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '/', // ensures correct client side routing with webpack-dev-server
   },
+  resolve: {
+    alias: {
+      '@src': path.resolve(__dirname, 'src'),
+    },
+  },
   module: {
     rules: [
       {
