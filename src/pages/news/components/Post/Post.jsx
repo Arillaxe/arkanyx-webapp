@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from '@src/pages/common/components';
+import { Button } from '@src/components';
 
 import './post.styl';
 
