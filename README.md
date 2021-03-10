@@ -1,3 +1,3 @@
 ## Arkanyx webapp
 
-1.
+1. Run `npm start`
